@@ -12,33 +12,50 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        fetchData()
+        navigationItem.title = "Hello VoiceTube"
+        view.backgroundColor = .white
+        
+        setupView()
     }
     
-    public func fetchData() {
-        let req = GetAppQuiz()
-        ApiManager.fetch(from: req) { [weak self] result in
-            guard let _ = self else { return }
-            switch result {
-            case .success(let data):
-                print(data)
-            case .failure(let error):
-                print(error.message)
-            }
-        }
+    private func setupView() {
+        let btn1 = createButton(title: "One", action: #selector(toQuizOne))
+        let btn2 = createButton(title: "Two", action: #selector(toQuizTwo))
+        view.addSubview(btn1)
+        view.addSubview(btn2)
+        
+        let views: ViewsDictionary = [
+            "one": btn1,
+            "two": btn2
+        ]
+        let vfls: VFLDictionary = [
+            "H:|-(8)-[one]-(8)-|": [],
+            "H:|-(8)-[two]-(8)-|": [],
+            "V:|-(150)-[one(44)]-(50)-[two(44)]": .alignAllCenterX
+        ]
+        
+        var constraints = [NSLayoutConstraint]()
+        constraints += constraintsArrayVFL(vfls, views: views)
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func createButton( title: String, action: Selector) -> UIButton {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle( title, for: .normal)
+        btn.addTarget( self, action: action, for: .touchUpInside)
+        btn.setTitleColor( .systemBlue, for: .normal)
+        
+        return btn
+    }
+    
+    @objc private func toQuizOne() {
+        let vc = AppQuizListVC()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc private func toQuizTwo() {
+        
     }
 
-
-}
-
-struct GetAppQuiz: ApiRequest {
-    typealias Response = AppQuiz
-    
-    let parameters: JSONDictionary? = [
-        "username": "VoiceTube",
-        "password": "interview"
-    ]
-    let urlString: String = "https://us-central1-lithe-window-713.cloudfunctions.net/appQuiz"
-    let methoid: HTTPMethod = .POST
-    let contentType: ContentType = .json
 }
