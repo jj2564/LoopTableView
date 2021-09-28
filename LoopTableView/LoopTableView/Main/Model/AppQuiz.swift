@@ -22,7 +22,7 @@ struct AppQuiz: Decodable {
 
 struct Video: Decodable {
     var title: String = ""
-    var image: URL?
+    var imageURL: URL?
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -32,8 +32,9 @@ struct Video: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
-        let imgURL = try container.decodeIfPresent(String.self, forKey: .img) ?? ""
-        image = URL(string: imgURL)
+        var imgURL = try container.decodeIfPresent(String.self, forKey: .img) ?? ""
+        imgURL = imgURL.replacingOccurrences(of: "http", with: "https")
+        imageURL = URL(string: imgURL)
     }
     
     init() {}

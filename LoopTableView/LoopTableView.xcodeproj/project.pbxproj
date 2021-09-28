@@ -15,12 +15,15 @@
 		9D53791226FC817500616B83 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53791126FC817500616B83 /* Config.swift */; };
 		9D53791726FC819200616B83 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53791426FC819200616B83 /* ApiManager.swift */; };
 		9D53791826FC819200616B83 /* ReachAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53791526FC819200616B83 /* ReachAbility.swift */; };
-		9D53791926FC819200616B83 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53791626FC819200616B83 /* AsyncImageView.swift */; };
 		9D53791B26FC863F00616B83 /* ApiEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53791A26FC863F00616B83 /* ApiEnum.swift */; };
 		9D5379252700797F00616B83 /* Dictionary+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5379242700797F00616B83 /* Dictionary+Data.swift */; };
 		9D537929270083DF00616B83 /* AppQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D537928270083DF00616B83 /* AppQuiz.swift */; };
 		9D53792B27014A7000616B83 /* AppQuizListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53792A27014A7000616B83 /* AppQuizListVC.swift */; };
 		9D53792D27014A8500616B83 /* AppQuizListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53792C27014A8500616B83 /* AppQuizListViewModel.swift */; };
+		9D53793027029A3A00616B83 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53792F27029A3A00616B83 /* VideoCell.swift */; };
+		9D53793227029A4D00616B83 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */; };
+		9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793327029E1A00616B83 /* Array+SafeIndex.swift */; };
+		9D5379372702F2EC00616B83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9D5379362702F2EC00616B83 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +37,14 @@
 		9D53791126FC817500616B83 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		9D53791426FC819200616B83 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		9D53791526FC819200616B83 /* ReachAbility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachAbility.swift; sourceTree = "<group>"; };
-		9D53791626FC819200616B83 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		9D53791A26FC863F00616B83 /* ApiEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEnum.swift; sourceTree = "<group>"; };
 		9D5379242700797F00616B83 /* Dictionary+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Data.swift"; sourceTree = "<group>"; };
 		9D537928270083DF00616B83 /* AppQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQuiz.swift; sourceTree = "<group>"; };
 		9D53792A27014A7000616B83 /* AppQuizListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQuizListVC.swift; sourceTree = "<group>"; };
 		9D53792C27014A8500616B83 /* AppQuizListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppQuizListViewModel.swift; sourceTree = "<group>"; };
+		9D53792F27029A3A00616B83 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		9D53793327029E1A00616B83 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SafeIndex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5379372702F2EC00616B83 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +106,6 @@
 				9D53791A26FC863F00616B83 /* ApiEnum.swift */,
 				9D53791426FC819200616B83 /* ApiManager.swift */,
 				9D53791526FC819200616B83 /* ReachAbility.swift */,
-				9D53791626FC819200616B83 /* AsyncImageView.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -108,7 +113,9 @@
 		9D5379232700795600616B83 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9D53793327029E1A00616B83 /* Array+SafeIndex.swift */,
 				9D5379242700797F00616B83 /* Dictionary+Data.swift */,
+				9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +123,7 @@
 		9D537926270083C200616B83 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9D53792E27029A2800616B83 /* View */,
 				9D537927270083CE00616B83 /* Model */,
 				9D53792A27014A7000616B83 /* AppQuizListVC.swift */,
 			);
@@ -129,6 +137,14 @@
 				9D53792C27014A8500616B83 /* AppQuizListViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D53792E27029A2800616B83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D53792F27029A3A00616B83 /* VideoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +163,9 @@
 			dependencies = (
 			);
 			name = LoopTableView;
+			packageProductDependencies = (
+				9D5379362702F2EC00616B83 /* Kingfisher */,
+			);
 			productName = LoopTableView;
 			productReference = 9D5378F726FC7CD600616B83 /* LoopTableView.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +194,9 @@
 				Base,
 			);
 			mainGroup = 9D5378EE26FC7CD600616B83;
+			packageReferences = (
+				9D5379352702F2EC00616B83 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9D5378F826FC7CD600616B83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -204,12 +226,14 @@
 				9D53791826FC819200616B83 /* ReachAbility.swift in Sources */,
 				9D5378FF26FC7CD600616B83 /* ViewController.swift in Sources */,
 				9D53791226FC817500616B83 /* Config.swift in Sources */,
+				9D53793227029A4D00616B83 /* UIView+AutoLayout.swift in Sources */,
 				9D53791726FC819200616B83 /* ApiManager.swift in Sources */,
 				9D53792B27014A7000616B83 /* AppQuizListVC.swift in Sources */,
 				9D5378FB26FC7CD600616B83 /* AppDelegate.swift in Sources */,
+				9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */,
 				9D53791026FC816B00616B83 /* Functions.swift in Sources */,
+				9D53793027029A3A00616B83 /* VideoCell.swift in Sources */,
 				9D53792D27014A8500616B83 /* AppQuizListViewModel.swift in Sources */,
-				9D53791926FC819200616B83 /* AsyncImageView.swift in Sources */,
 				9D5379252700797F00616B83 /* Dictionary+Data.swift in Sources */,
 				9D537929270083DF00616B83 /* AppQuiz.swift in Sources */,
 				9D53791B26FC863F00616B83 /* ApiEnum.swift in Sources */,
@@ -281,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -336,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,6 +448,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D5379352702F2EC00616B83 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D5379362702F2EC00616B83 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D5379352702F2EC00616B83 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D5378EF26FC7CD600616B83 /* Project object */;
 }
