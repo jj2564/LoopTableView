@@ -16,29 +16,37 @@ class VideoCell: UITableViewCell {
     
     public func updateData(data: Video) {
         self.data = data
+        
+        view.titleLabel.text = data.title
         view.imageView.kf.indicatorType = .activity
-        view.imageView.kf.setImage(
-            with: data.imageURL,
-            placeholder: UIImage(named: "image_default"),
-            options: [
-                .cacheOriginalImage,
-                .scaleFactor(UIScreen.main.scale)
-            ])
-        {
-            [weak self] result in
-            guard let self = self else { return }
-            switch result {
-            case .success(_):
-                UIView.performWithoutAnimation {
-                    self.tableView?.beginUpdates()
-//                    self.layoutIfNeeded()
-                    self.tableView?.endUpdates()
-                }
-            case .failure(_):
-                self.view.imageView.image = UIImage(named: "image_failed")
+        let processor: ImageProcessor = RoundCornerImageProcessor(cornerRadius: 20)
+        KF.url(data.imageURL)
+            .setProcessor(processor)
+            .scaleFactor(UIScreen.main.scale)
+            .loadDiskFileSynchronously()
+            .cacheMemoryOnly()
+            .onSuccess( { [weak self] result in
+                guard let self = self else { return }
+                let key = result.source.cacheKey
+                let isCached = ImageCache.default.isCached(forKey: key)
+                ImageCache.default.store(result.image, forKey: key)
+                self.ImageAnimation(isCached)
+            })
+            .set(to: view.imageView)
+    }
+    
+    private func ImageAnimation(_ isCached: Bool) {
+        UIView.performWithoutAnimation {
+            self.tableView?.beginUpdates()
+            self.tableView?.endUpdates()
+        }
+        if !isCached {
+            // Fade in效果
+            self.view.imageView.alpha = 0
+            UIView.animate(withDuration: 1.5) {
+                self.view.imageView.alpha = 1
             }
         }
-        view.titleLabel.text = data.title
     }
     
     required init?(coder: NSCoder) {
