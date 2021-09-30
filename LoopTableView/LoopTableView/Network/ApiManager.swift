@@ -17,10 +17,12 @@ protocol ApiRequest: Hashable {
     var contentType: ContentType { get }
     
     var url: URL? { get }
+    var key: String { get }
 }
 
 extension ApiRequest {
     var url: URL? { URL(string: urlString) }
+    var key: String { String(describing: self) }
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(urlString)
@@ -69,6 +71,12 @@ class ApiManagerURLSession: NSObject {
         urlRequest.httpBody = req.parameters?.data
         urlRequest.addValue(req.contentType.rawValue, forHTTPHeaderField: "Content-Type")
         
+        // 先找尋UserDefaults有無已存在的data
+        if let data = UserDefaults.standard.getDataFromRequest(req) {
+            completion(.success(data))
+            return
+        }
+        
         let task = URLSession.shared.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard let self = self else { return }
             guard let _ = (response as? HTTPURLResponse)?.statusCode else {
@@ -85,6 +93,8 @@ class ApiManagerURLSession: NSObject {
                 completion(.failure(ApiError.nilData))
                 return
             }
+            // 先存入UserDefaults以利下次直接取用
+            UserDefaults.standard.set( data, forKey: req.key)
             
             guard let value = try? self.decoder.decode(Req.Response.self, from: data) else {
                 completion(.failure(ApiError.jsonError))
