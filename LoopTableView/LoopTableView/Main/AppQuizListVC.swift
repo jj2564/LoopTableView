@@ -50,12 +50,17 @@ extension AppQuizListVC {
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(VideoCell.self, forCellReuseIdentifier: VideoCell.cellIdentifier)
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         return tableView
     }
 }
 
 extension AppQuizListVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.datas.count
     }
@@ -63,11 +68,30 @@ extension AppQuizListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoCell.cellIdentifier) as? VideoCell else { return UITableViewCell() }
         if let video = viewModel.datas[safe: indexPath.row] {
-//            cell.setNeedsLayout()
             cell.updateData(data: video)
         }
         return cell
     }
+
+    // LoopTableView
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = videoTableView.contentOffset.y
+        if position > videoTableView.contentSize.height - videoTableView.frame.size.height {
+            viewModel.datas = viewModel.datas + viewModel.datas
+            videoTableView.reloadData()
+        }
+    }
     
+    // 直接放numberOfSection IntMax會卡死，但是又怕viewModel.datas記憶體爆炸。
+    // 所以做了一個把tableview推回中央的功能，會有一個停頓的感覺一時還沒想到怎麼改善。不過1000欄也挺多的！？
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let totalCount = viewModel.datas.count
+        if totalCount < 1000 { return }
+        let row = (indexPath.row + 1)
+        if row == totalCount {
+            let middle = totalCount / 2
+            tableView.scrollToRow(at: IndexPath(row: middle, section: 0), at: .middle, animated: false)
+        }
+    }
     
 }

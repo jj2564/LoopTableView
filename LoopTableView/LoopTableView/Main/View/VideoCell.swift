@@ -118,13 +118,3 @@ class VideoView: UIView {
         NSLayoutConstraint.activate(constraints)
     }
 }
-
-extension UITableViewCell {
-    var tableView: UITableView? {
-        var view = superview
-        while let v = view, v.isKind(of: UITableView.self) == false {
-            view = v.superview
-        }
-        return view as? UITableView
-    }
-}

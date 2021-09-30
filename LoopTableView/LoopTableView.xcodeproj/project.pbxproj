@@ -24,6 +24,7 @@
 		9D53793227029A4D00616B83 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */; };
 		9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793327029E1A00616B83 /* Array+SafeIndex.swift */; };
 		9D5379372702F2EC00616B83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9D5379362702F2EC00616B83 /* Kingfisher */; };
+		9D53793927055A4F00616B83 /* UITableViewCell+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9D53792F27029A3A00616B83 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		9D53793327029E1A00616B83 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SafeIndex.swift"; sourceTree = "<group>"; };
+		9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+tableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				9D53793327029E1A00616B83 /* Array+SafeIndex.swift */,
 				9D5379242700797F00616B83 /* Dictionary+Data.swift */,
 				9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */,
+				9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				9D53792B27014A7000616B83 /* AppQuizListVC.swift in Sources */,
 				9D5378FB26FC7CD600616B83 /* AppDelegate.swift in Sources */,
 				9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */,
+				9D53793927055A4F00616B83 /* UITableViewCell+tableView.swift in Sources */,
 				9D53791026FC816B00616B83 /* Functions.swift in Sources */,
 				9D53793027029A3A00616B83 /* VideoCell.swift in Sources */,
 				9D53792D27014A8500616B83 /* AppQuizListViewModel.swift in Sources */,
