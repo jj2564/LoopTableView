@@ -26,6 +26,10 @@
 		9D5379372702F2EC00616B83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9D5379362702F2EC00616B83 /* Kingfisher */; };
 		9D53793927055A4F00616B83 /* UITableViewCell+tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */; };
 		9D53793D2705895D00616B83 /* UserDefault+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D53793C2705895C00616B83 /* UserDefault+Data.swift */; };
+		9DC0E4EC2707F85200652FB9 /* CountDownTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */; };
+		9DC0E4EF2708057000652FB9 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4EE2708057000652FB9 /* NotificationToken.swift */; };
+		9DC0E4F12708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4F02708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift */; };
+		9DC0E4F327082B2500652FB9 /* CountDownTimerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		9D53793327029E1A00616B83 /* Array+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SafeIndex.swift"; sourceTree = "<group>"; };
 		9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+tableView.swift"; sourceTree = "<group>"; };
 		9D53793C2705895C00616B83 /* UserDefault+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Data.swift"; sourceTree = "<group>"; };
+		9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerVC.swift; sourceTree = "<group>"; };
+		9DC0E4EE2708057000652FB9 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
+		9DC0E4F02708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+AutoRemoveObserver.swift"; sourceTree = "<group>"; };
+		9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			children = (
 				9D537926270083C200616B83 /* Main */,
 				9D5379232700795600616B83 /* Extensions */,
+				9DC0E4ED2708053F00652FB9 /* Classes */,
 				9D53791326FC819200616B83 /* Network */,
 				9D53791126FC817500616B83 /* Config.swift */,
 				9D53790F26FC816B00616B83 /* Functions.swift */,
@@ -122,6 +131,7 @@
 				9D53793127029A4D00616B83 /* UIView+AutoLayout.swift */,
 				9D53793827055A4F00616B83 /* UITableViewCell+tableView.swift */,
 				9D53793C2705895C00616B83 /* UserDefault+Data.swift */,
+				9DC0E4F02708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,8 +175,18 @@
 		9DC0E4E72707F0A300652FB9 /* QuizTwo */ = {
 			isa = PBXGroup;
 			children = (
+				9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */,
+				9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */,
 			);
 			path = QuizTwo;
+			sourceTree = "<group>";
+		};
+		9DC0E4ED2708053F00652FB9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9DC0E4EE2708057000652FB9 /* NotificationToken.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D53791826FC819200616B83 /* ReachAbility.swift in Sources */,
+				9DC0E4EC2707F85200652FB9 /* CountDownTimerVC.swift in Sources */,
 				9D5378FF26FC7CD600616B83 /* ViewController.swift in Sources */,
 				9D53791226FC817500616B83 /* Config.swift in Sources */,
 				9D53793227029A4D00616B83 /* UIView+AutoLayout.swift in Sources */,
@@ -254,13 +275,16 @@
 				9D5378FB26FC7CD600616B83 /* AppDelegate.swift in Sources */,
 				9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */,
 				9D53793927055A4F00616B83 /* UITableViewCell+tableView.swift in Sources */,
+				9DC0E4F327082B2500652FB9 /* CountDownTimerVM.swift in Sources */,
 				9D53791026FC816B00616B83 /* Functions.swift in Sources */,
 				9D53793D2705895D00616B83 /* UserDefault+Data.swift in Sources */,
+				9DC0E4EF2708057000652FB9 /* NotificationToken.swift in Sources */,
 				9D53793027029A3A00616B83 /* VideoCell.swift in Sources */,
 				9D53792D27014A8500616B83 /* AppQuizListViewModel.swift in Sources */,
 				9D5379252700797F00616B83 /* Dictionary+Data.swift in Sources */,
 				9D537929270083DF00616B83 /* AppQuiz.swift in Sources */,
 				9D53791B26FC863F00616B83 /* ApiEnum.swift in Sources */,
+				9DC0E4F12708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
