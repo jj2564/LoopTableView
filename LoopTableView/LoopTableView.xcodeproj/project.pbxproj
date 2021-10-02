@@ -129,9 +129,8 @@
 		9D537926270083C200616B83 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9D53792E27029A2800616B83 /* View */,
-				9D537927270083CE00616B83 /* Model */,
-				9D53792A27014A7000616B83 /* AppQuizListVC.swift */,
+				9DC0E4E62707F09300652FB9 /* QuizOne */,
+				9DC0E4E72707F0A300652FB9 /* QuizTwo */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -151,6 +150,23 @@
 				9D53792F27029A3A00616B83 /* VideoCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9DC0E4E62707F09300652FB9 /* QuizOne */ = {
+			isa = PBXGroup;
+			children = (
+				9D53792E27029A2800616B83 /* View */,
+				9D537927270083CE00616B83 /* Model */,
+				9D53792A27014A7000616B83 /* AppQuizListVC.swift */,
+			);
+			path = QuizOne;
+			sourceTree = "<group>";
+		};
+		9DC0E4E72707F0A300652FB9 /* QuizTwo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuizTwo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
