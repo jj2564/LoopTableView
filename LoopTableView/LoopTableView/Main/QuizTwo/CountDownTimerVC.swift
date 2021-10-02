@@ -32,8 +32,8 @@ class CountDownTimerVC: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.updatedHandler = { [unowned self] result in
-            self.secondLabel.text = result
+        viewModel.updatedHandler = { [weak self] result in
+            self?.secondLabel.text = result
         }
     }
     
