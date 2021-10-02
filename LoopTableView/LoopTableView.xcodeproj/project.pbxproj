@@ -29,6 +29,7 @@
 		9DC0E4EC2707F85200652FB9 /* CountDownTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */; };
 		9DC0E4EF2708057000652FB9 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4EE2708057000652FB9 /* NotificationToken.swift */; };
 		9DC0E4F12708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4F02708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift */; };
+		9DC0E4F327082B2500652FB9 /* CountDownTimerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerVC.swift; sourceTree = "<group>"; };
 		9DC0E4EE2708057000652FB9 /* NotificationToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
 		9DC0E4F02708064B00652FB9 /* NotificationCenter+AutoRemoveObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+AutoRemoveObserver.swift"; sourceTree = "<group>"; };
+		9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				9DC0E4EB2707F85200652FB9 /* CountDownTimerVC.swift */,
+				9DC0E4F227082B2500652FB9 /* CountDownTimerVM.swift */,
 			);
 			path = QuizTwo;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				9D5378FB26FC7CD600616B83 /* AppDelegate.swift in Sources */,
 				9D53793427029E1A00616B83 /* Array+SafeIndex.swift in Sources */,
 				9D53793927055A4F00616B83 /* UITableViewCell+tableView.swift in Sources */,
+				9DC0E4F327082B2500652FB9 /* CountDownTimerVM.swift in Sources */,
 				9D53791026FC816B00616B83 /* Functions.swift in Sources */,
 				9D53793D2705895D00616B83 /* UserDefault+Data.swift in Sources */,
 				9DC0E4EF2708057000652FB9 /* NotificationToken.swift in Sources */,
