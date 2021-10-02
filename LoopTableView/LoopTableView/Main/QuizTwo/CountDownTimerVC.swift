@@ -86,6 +86,7 @@ private extension CountDownTimerVC {
         v.font = .systemFont(ofSize: 72, weight: .heavy)
         v.textAlignment = .center
         v.text = "123"
+        v.numberOfLines = 0
         return v
     }
     
