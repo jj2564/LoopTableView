@@ -13,7 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = "Hello VoiceTube"
-        view.backgroundColor = .white
         
         setupView()
     }
@@ -55,7 +54,8 @@ class ViewController: UIViewController {
     }
     
     @objc private func toQuizTwo() {
-        
+        let vc = CountDownTimerVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

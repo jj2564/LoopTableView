@@ -15,7 +15,6 @@ class AppQuizListVC: UIViewController {
     override func loadView() {
         super.loadView()
         navigationItem.title = "Quiz One"
-        view.backgroundColor = .white
         
         view.addSubview(videoTableView)
         videoTableView.edgeWithSuperView()
